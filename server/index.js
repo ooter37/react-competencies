@@ -18,7 +18,7 @@ app.use(session({
         maxAge: 1000*60*60*24*14
     }
 }))
-
+app.use( express.static( `${__dirname}/../build` ) );
 //SERVER SETUP
 app.post('/api/chat', (req,res,next) => {
     const {msg} = req.query
