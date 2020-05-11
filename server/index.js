@@ -20,7 +20,7 @@ app.use(session({
 }))
 
 //SERVER SETUP
-app.post('/api/msg', (req,res,next) => {
+app.post('/api/chat', (req,res,next) => {
     const {msg} = req.query
     res.status(200).send(msg)
 })
